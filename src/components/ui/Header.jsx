@@ -1,0 +1,85 @@
+// src/components/ui/Header.jsx
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import Container from "./Container.jsx";
+
+import headerLogo from "../../assets/images/headerslogo.jpg";
+
+function NavItem({ to, children }) {
+  return (
+    <NavLink
+      to={to}
+      className={({ isActive }) =>
+        [
+          "px-3 py-2 rounded-lg text-sm hover:bg-[color:var(--ww-grey-50)] transition",
+          isActive
+            ? "text-[color:var(--ww-brown,#382F20)] font-semibold bg-[color:var(--ww-grey-50,#f4f2ef)]"
+            : "text-[color:var(--ww-brown,#382F20)]/80",
+        ].join(" ")
+      }
+    >
+      {children}
+    </NavLink>
+  );
+}
+
+export default function Header() {
+  return (
+    <header className="sticky top-0 z-40 w-full bg-[var(--bg,rgba(255,255,255,0.9))]/70 backdrop-blur border-b border-black/10">
+
+      <Container className="flex items-center justify-between h-16">
+
+        {/* LEFT */}
+        <Link
+          to="/"
+          className="flex items-center gap-3"
+          aria-label="Waxwing On Set — Home"
+        >
+
+          <img
+            src={headerLogo}
+            alt="Waxwing Logo"
+            className="h-12 w-auto object-contain"
+          />
+
+          <span className="font-bold text-lg text-[color:var(--ww-brown,#382F20)]">
+            Waxwing On Set
+          </span>
+
+        </Link>
+
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-1">
+
+          <NavItem to="/gear">
+            Gear
+          </NavItem>
+
+          <NavItem to="/quote#dates">
+            Get a quote
+          </NavItem>
+
+          <NavItem to="/contact">
+            Contact
+          </NavItem>
+
+        </nav>
+
+        {/* Mobile CTA */}
+        <div className="md:hidden flex items-center gap-2">
+
+          <Link
+            to="/quote#dates"
+            className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm bg-[#382F20] text-white"
+            aria-label="Get a quote"
+          >
+            Get a quote
+          </Link>
+
+        </div>
+
+      </Container>
+
+    </header>
+  );
+}

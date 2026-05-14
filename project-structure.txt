@@ -1,0 +1,105 @@
+.
+├── .DS_Store
+├── .gitignore
+├── .vscode
+│   └── settings.json
+├── CHANGELOG_WAXWING.md
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── project-structure.txt
+├── public
+│   ├── .DS_Store
+│   └── assets
+│       ├── .DS_Store
+│       ├── logo.svg
+│       └── mascot-bird.png
+├── README.md
+├── src
+│   ├── .DS_Store
+│   ├── App.jsx
+│   ├── components
+│   │   ├── .DS_Store
+│   │   ├── calendar
+│   │   │   ├── Calendar.jsx
+│   │   │   ├── CalendarGrid.jsx
+│   │   │   ├── CalendarPreview.jsx
+│   │   │   ├── Legend.jsx
+│   │   │   ├── MonthNav.jsx
+│   │   │   └── useCalendar.jsx
+│   │   ├── game
+│   │   │   ├── assetLoader.js
+│   │   │   ├── assets
+│   │   │   │   ├── intro_background.png
+│   │   │   │   ├── obstacles
+│   │   │   │   │   ├── apple_boxes.png
+│   │   │   │   │   ├── coffee.png
+│   │   │   │   │   ├── diva.png
+│   │   │   │   │   ├── grip_cart.png
+│   │   │   │   │   ├── interrupting_person.png
+│   │   │   │   │   ├── pizza.png
+│   │   │   │   │   └── wires.png
+│   │   │   │   ├── pixel_game_background.jpg
+│   │   │   │   └── PlayableCharacter.png
+│   │   │   ├── constants.js
+│   │   │   ├── draw.js
+│   │   │   ├── hooks
+│   │   │   │   ├── useGameLoop.js
+│   │   │   │   └── useInput.js
+│   │   │   ├── index.js
+│   │   │   ├── InlineGameCTA.jsx
+│   │   │   ├── PixelGameCanvas.jsx
+│   │   │   ├── PixelGameModal.jsx
+│   │   │   ├── PromoGameGate.jsx
+│   │   │   └── promoStorage.js
+│   │   ├── marketing
+│   │   │   └── PackageShowcase.jsx
+│   │   ├── quote
+│   │   │   ├── .DS_Store
+│   │   │   ├── AddonsGrid.jsx
+│   │   │   ├── bookingSession.js
+│   │   │   ├── PackageCards.jsx
+│   │   │   ├── ServiceItemCards.jsx
+│   │   │   ├── Stepper.jsx
+│   │   │   └── steps
+│   │   │       ├── AdditionalServices.jsx
+│   │   │       ├── StepAddons.jsx
+│   │   │       ├── StepDates.jsx
+│   │   │       ├── StepPackage.jsx
+│   │   │       └── StepReview.jsx
+│   │   └── ui
+│   │       ├── Button.jsx
+│   │       ├── Container.jsx
+│   │       ├── Footer.jsx
+│   │       ├── Header.jsx
+│   │       ├── Hero.jsx
+│   │       ├── ReelPlaceholder.jsx
+│   │       ├── ReelSection.jsx
+│   │       ├── ScrollToHash.jsx
+│   │       └── ServicesGrid.jsx
+│   ├── hooks
+│   │   ├── useAutoScroll.js
+│   │   ├── usePromoGame.js
+│   │   └── useQuotePricing.js
+│   ├── index.css
+│   ├── index.jsx
+│   ├── lib
+│   │   ├── .DS_Store
+│   │   ├── availability.js
+│   │   ├── config.js
+│   │   ├── quote
+│   │   │   ├── config.js
+│   │   │   ├── dates.js
+│   │   │   └── money.js
+│   │   └── storage.js
+│   ├── main.jsx
+│   └── pages
+│       ├── ContactPage.jsx
+│       ├── GearListPage.jsx
+│       ├── HomePage.jsx
+│       └── QuotePage.jsx
+├── tailwind.config.js
+└── vite.config.js
+
+19 directories, 84 files
