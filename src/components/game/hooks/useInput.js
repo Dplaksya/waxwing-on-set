@@ -16,31 +16,25 @@ export default function useInput({ onLeft, onRight }) {
     return () => window.removeEventListener("keydown", onKey);
   }, [onLeft, onRight]);
 
-  // simple swipe
-  useEffect(() => {
-    let startX = null;
-    let startY = null;
-    function touchStart(e) {
-      const t = e.touches[0];
-      startX = t.clientX;
-      startY = t.clientY;
+// mobile tap controls
+useEffect(() => {
+  function handleTap(e) {
+    const t = e.changedTouches[0];
+    const x = t.clientX;
+
+    const screenMid = window.innerWidth / 2;
+
+    if (x < screenMid) {
+      onLeft && onLeft();
+    } else {
+      onRight && onRight();
     }
-    function touchEnd(e) {
-      if (startX == null || startY == null) return;
-      const t = e.changedTouches[0];
-      const dx = t.clientX - startX;
-      const dy = t.clientY - startY;
-      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 24) {
-        if (dx < 0) onLeft && onLeft();
-        else onRight && onRight();
-      }
-      startX = startY = null;
-    }
-    window.addEventListener("touchstart", touchStart, { passive: true });
-    window.addEventListener("touchend", touchEnd);
-    return () => {
-      window.removeEventListener("touchstart", touchStart);
-      window.removeEventListener("touchend", touchEnd);
-    };
-  }, [onLeft, onRight]);
+  }
+
+  window.addEventListener("touchend", handleTap, { passive: true });
+
+  return () => {
+    window.removeEventListener("touchend", handleTap);
+  };
+}, [onLeft, onRight]);
 }

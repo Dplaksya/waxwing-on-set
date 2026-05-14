@@ -401,8 +401,10 @@ export default function PixelGameCanvas({ onWinRequest, bookingKey }) {
   );
 
   return (
-    <div ref={containerRef} className="absolute inset-0">
-      <canvas ref={canvasRef} className="block w-full h-full" />
+<div
+  ref={containerRef}
+  className="absolute inset-0 touch-none"
+>      <canvas ref={canvasRef} className="block w-full h-full" />
 
       {/* INTRO */}
       {phase === "intro" && (
