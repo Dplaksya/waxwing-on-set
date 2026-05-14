@@ -41,7 +41,7 @@ export default function StepDates({ selected = [], onChange, onNext }) {
       <Container>
         <header className="mb-6 md:mb-8">
           <h1 className="text-2xl md:text-3xl font-semibold text-[color:var(--ww-brown)]">Check Dates</h1>
-          <p className="mt-2 text-[color:var(--ww-muted)]">Pick your shoot days on the left, then continue to choose a package and add-ons.</p>
+          <p className="mt-2 text-[color:var(--ww-muted)]">Pick your shoot days, then continue.</p>
         </header>
 
         <div className="grid md:grid-cols-2 gap-8">
