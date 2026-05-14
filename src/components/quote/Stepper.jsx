@@ -71,8 +71,7 @@ export default function Stepper({ value = "dates" }) {
 
         <div className="h-2 w-full rounded-full bg-black/10 overflow-hidden">
           <div
-            className="h-full rounded-full bg-black transition-all duration-300"
-            style={{
+className="h-full rounded-full bg-[#5A4B36] transition-all duration-300"            style={{
               width: `${((currentIndex + 1) / STEPS.length) * 100}%`,
             }}
           />
